@@ -73,7 +73,6 @@ export default function App() {
   return (
     <View style={styles.container}>
       {!display &&
-        
         <View style={styles.prayerTimes}>
             <Text style={styles.prayerTimeTitle}>Prayer Time</Text>
             <Text style={styles.prayerTime}>{prayerTimes[0].title}: {prayerTimes[0].time}</Text>
@@ -89,7 +88,7 @@ export default function App() {
         <Text style={styles.btnText}>Prayer Times</Text>
       </TouchableOpacity>}
 
-      <StatusBar style="auto" />
+      <StatusBar style="light" />
     </View>
   )
 }
