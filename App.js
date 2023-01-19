@@ -106,8 +106,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: '#090C08'
   },
-  btn: {backgroundColor: '#F8E9E9',padding: 40,borderRadius: 15},
-  btnText: {fontSize: 40, fontWeight: 'bold', color: '#D72638'},
+  btn: {backgroundColor: '#EAF6FF',padding: 40,borderRadius: 15},
+  btnText: {fontSize: 40, fontWeight: 'bold', color: '#090C08'},
   prayerTimes: {
     flexDirection: 'column',
     justifyContent: "space-evenly",
