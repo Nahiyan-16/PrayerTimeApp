@@ -70,18 +70,22 @@ export default function App() {
     Vibration.vibrate()
   }
 
+  function getPrayerTimes(){
+
+    return (
+      <View style={styles.prayerTimes}>
+        <Text style={styles.prayerTimeTitle}>Prayer Times</Text>
+        {prayerTimes.map((time, index) => <Text style={styles.prayerTime} id={index}>{time.title}: {time.time}</Text>)}
+      </View>
+    )
+  }
+
   return (
     <View style={styles.container}>
-      {!display &&
-        <View style={styles.prayerTimes}>
-            <Text style={styles.prayerTimeTitle}>Prayer Time</Text>
-            <Text style={styles.prayerTime}>{prayerTimes[0].title}: {prayerTimes[0].time}</Text>
-            <Text style={styles.prayerTime}>{prayerTimes[1].title}: {prayerTimes[1].time}</Text>
-            <Text style={styles.prayerTime}>{prayerTimes[2].title}: {prayerTimes[2].time}</Text>
-            <Text style={styles.prayerTime}>{prayerTimes[3].title}: {prayerTimes[3].time}</Text>
-            <Text style={styles.prayerTime}>{prayerTimes[4].title}: {prayerTimes[4].time}</Text>
-          </View>
-      }
+      {!display && 
+        <View>
+          {getPrayerTimes()}
+        </View>}
 
       {display && 
       <TouchableOpacity style={styles.btn} onPress={displayTimes}>
