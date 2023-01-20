@@ -71,10 +71,15 @@ export default function App() {
   }
 
   function getPrayerTimes(){
+    const d = new Date()
+    const day = d.getDate()
+    const month = d.getMonth() + 1
+    const year = d.getFullYear()
 
+    const date = `${month}/${day}/${year}`
     return (
       <View style={styles.prayerTimes}>
-        <Text style={styles.prayerTimeTitle}>Prayer Times</Text>
+        <Text style={styles.prayerTimeTitle}>{date}</Text>
         {prayerTimes.map((time, index) => <Text style={styles.prayerTime} id={index}>{time.title}: {time.time}</Text>)}
       </View>
     )
